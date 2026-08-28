@@ -210,6 +210,57 @@ footer {
 }
 
 /* TELEPHONE */
+/* À PROPOS */
+
+#apropos {
+    background-color: white;
+    max-width: none;
+    padding: 100px max(30px, calc((100% - 1040px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.apropos-contenu {
+    flex: 1;
+}
+
+.apropos-contenu h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.apropos-contenu p {
+    max-width: 700px;
+    margin-bottom: 18px;
+}
+
+.apropos-infos {
+    width: 320px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.info {
+    background-color: #f5f7fa;
+    padding: 25px 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info strong {
+    font-size: 30px;
+    color: #2563eb;
+}
+
+.info span {
+    font-weight: bold;
+}
 
 @media (max-width: 700px) {
 
