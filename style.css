@@ -76,12 +76,12 @@ nav a:hover {
     letter-spacing: 2px;
     margin-bottom: 15px;
 }
-
 .sous-titre {
-    color: #111827;
-    font-size: 35px;
+    color: #2563eb;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
 }
 #accueil h1 {
     font-size: 58px;
