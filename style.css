@@ -348,3 +348,9 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+#apropos .apropos-contenu h2 {
+    font-size: 35px !important;
+    color: #111827 !important;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
