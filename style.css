@@ -134,11 +134,12 @@ section {
     margin: auto;
     padding: 90px 30px;
 }
-
-section h2 {
-    font-size: 35px;
-    margin-bottom: 25px;
+.titre-section {
+    font-size: 42px;
     color: #111827;
+    margin-bottom: 15px;
+}
+
 }
 
 /* A PROPOS */
@@ -269,13 +270,6 @@ footer {
     max-width: none;
     padding-left: max(30px, calc((100% - 1040px) / 2));
     padding-right: max(30px, calc((100% - 1040px) / 2));
-}
-
-.section-label {
-    color: #2563eb;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
 }
 
 .section-description {
