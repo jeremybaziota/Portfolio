@@ -260,3 +260,11 @@ footer {
     }
 
 }
+.accueil-photo img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 5px solid #2563eb;
+}
