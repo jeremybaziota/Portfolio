@@ -1,364 +1,183 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio - Développeur & Designer</title>
+  <style>
+    /* Style global */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <title>Jérémy Baziota | Portfolio</title>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+    }
 
-    <meta name="description"
-        content="Portfolio professionnel de Jérémy Baziota, ingénieur en informatique, développeur Web et designer graphique.">
+    /* En-tête / Navbar */
+    header {
+      background-color: #1e293b;
+      color: #ffffff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-    <link rel="stylesheet" href="style.css">
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* Conteneur principal */
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Section Projets */
+    .projects-section {
+      margin-top: 2rem;
+    }
+
+    .projects-section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #0f172a;
+    }
+
+    /* Grille des cartes projets */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Carte de projet */
+    .project-card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Contrôle des images (évite qu'elles ne décalent la disposition) */
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Contenu texte de la carte */
+    .project-info {
+      padding: 1.5rem;
+    }
+
+    .project-info h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #1e293b;
+    }
+
+    .project-info p {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    /* Pied de page */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #1e293b;
+      color: #94a3b8;
+      margin-top: 4rem;
+    }
+  </style>
 </head>
-
 <body>
 
-    <!-- NAVIGATION -->
-
-    <header>
-
-        <nav>
-            <a href="#accueil">Accueil</a>
-            <a href="#apropos">À propos</a>
-            <a href="#competences">Compétences</a>
-            <a href="#projets">Projets</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-    </header>
-
-
-    <!-- ACCUEIL -->
-
-    <section id="accueil">
-
-        <div class="accueil-photo">
-
-            <img src="./photo.jpg" alt="Photo de Jérémy Baziota">
-
-        <div class="accueil-contenu">
-
-            <p class="accueil-sous-titre">
-                BIENVENUE SUR MON PORTFOLIO
-            </p>
-
-            <h1>
-                Jérémy Baziota
-            </h1>
-
-            <h2>
-                Ingénieur en informatique
-            </h2>
-
-            <p class="specialite">
-                Développeur Web & Designer Graphique
-            </p>
-
-            <p>
-                Je conçois des sites Web modernes, des interfaces
-                fonctionnelles et des supports de communication
-                visuelle professionnels.
-            </p>
-
-            <div class="boutons">
-
-                <a href="#projets">
-                    Voir mes projets
-                </a>
-
-                <a href="#contact" class="bouton-secondaire">
-                    Me contacter
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- À PROPOS -->
-
-    <section id="apropos">
-
-        <div class="apropos-contenu">
-
-            <h2>
-                À PROPOS DE MOI
-            </h2>
-
-            <p>
-                Je suis Jérémy Baziota, ingénieur en informatique,
-                spécialisé dans le développement Web et le design graphique.
-            </p>
-
-            <p>
-                Je conçois des sites Web modernes, des interfaces
-                fonctionnelles et des supports de communication visuelle
-                adaptés aux besoins des particuliers, entreprises
-                et organisations.
-            </p>
-
-            <p>
-                Mon approche consiste à associer technologie,
-                créativité et expérience utilisateur afin de créer
-                des solutions à la fois professionnelles et efficaces.
-            </p>
-
-        </div>
-
-
-        <div class="apropos-infos">
-
-            <div class="info">
-                <strong>01</strong>
-                <span>Développement Web</span>
-            </div>
-
-            <div class="info">
-                <strong>02</strong>
-                <span>Design graphique</span>
-            </div>
-
-            <div class="info">
-                <strong>03</strong>
-                <span>Solutions numériques</span>
-            </div>
-
-            <div class="info">
-                <strong>04</strong>
-                <span>Créativité & innovation</span>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- COMPÉTENCES -->
-
-    <section id="competences">
-
-        <h2>
-            MES COMPÉTENCES
-        </h2>
-
-        <p class="section-description">
-            Des compétences techniques et créatives au service de projets
-            numériques modernes et professionnels.
-        </p>
-
-        <div class="competences-cartes">
-
-            <div class="competence-carte">
-
-                <div class="competence-numero">01</div>
-
-                <h3>HTML & CSS</h3>
-
-                <p>
-                    Création de sites Web modernes et responsives.
-                </p>
-
-            </div>
-
-
-            <div class="competence-carte">
-
-                <div class="competence-numero">02</div>
-
-                <h3>JavaScript</h3>
-
-                <p>
-                    Création d'interactions et de fonctionnalités dynamiques.
-                </p>
-
-            </div>
-
-
-            <div class="competence-carte">
-
-                <div class="competence-numero">03</div>
-
-                <h3>PHP</h3>
-
-                <p>
-                    Développement de fonctionnalités côté serveur.
-                </p>
-
-            </div>
-
-
-            <div class="competence-carte">
-
-                <div class="competence-numero">04</div>
-
-                <h3>Design graphique</h3>
-
-                <p>
-                    Création de logos, affiches et supports visuels.
-                </p>
-
-            </div>
-
-
-            <div class="competence-carte">
-
-                <div class="competence-numero">05</div>
-
-                <h3>Photoshop</h3>
-
-                <p>
-                    Retouche photo et création de compositions graphiques.
-                </p>
-
-            </div>
-
-
-            <div class="competence-carte">
-
-                <div class="competence-numero">06</div>
-
-                <h3>Création Web</h3>
-
-                <p>
-                    Conception de solutions Web adaptées aux besoins des clients.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROJETS -->
-
-    <section id="projets">
-
-        <h2>
-            MES PROJETS
-        </h2>
-<div class="project-card">
-      <img src="images/Projet1.png" alt="Aperçu du site Web Nexora">
-      <h3>Projet 01 : Site Web Nexora</h3>
-      <p>Description rapide du projet Nexora...</p>
-    </div>
-        <article>
-
-            <h3>
-                Création de logo
-            </h3>
-
-            <p>
-                Conception d'une identité visuelle professionnelle
-                pour un salon de coiffure.
-            </p>
-
+  <!-- En-tête -->
+  <header>
+    <h1>Mon Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenu Principal -->
+  <main>
+    <section id="projets" class="projects-section">
+      <h2>Mes Projets</h2>
+
+      <div class="projects-grid">
+        
+        <!-- Projet 01 : Nexora -->
+        <article class="project-card">
+          <img src="images/nexora.png" alt="Aperçu du site Web Nexora">
+          <div class="project-info">
+            <h3>Projet 01 : Site Web Nexora</h3>
+            <p>Conception et développement d'un site web moderne et responsive pour la marque Nexora.</p>
+          </div>
         </article>
 
-
-        <article>
-
-            <h3>
-                Création d'affiche
-            </h3>
-
-            <p>
-                Conception d'un support de communication
-                moderne et professionnel.
-            </p>
-
+        <!-- Projet 02 : Logo / Design -->
+        <article class="project-card">
+          <img src="https://via.placeholder.com/600x400?text=Logo+Design" alt="Aperçu du projet Logo">
+          <div class="project-info">
+            <h3>Projet 02 : Logo &amp; Design</h3>
+            <p>Création d'une identité visuelle complète et déclinaison de logos pour entreprise.</p>
+          </div>
         </article>
 
-
-        <article>
-
-            <h3>
-                Application Web
-            </h3>
-
-            <p>
-                Conception d'une application Web pour la gestion
-                et le suivi des informations.
-            </p>
-
+        <!-- Projet 03 : Affiche -->
+        <article class="project-card">
+          <img src="https://via.placeholder.com/600x400?text=Affiche+Publicitaire" alt="Aperçu du projet Affiche">
+          <div class="project-info">
+            <h3>Projet 03 : Affiche Publicitaire</h3>
+            <p>Design graphique d'affiches promotionnelles pour événementiel et impression grand format.</p>
+          </div>
         </article>
 
+      </div>
     </section>
+  </main>
 
-
-    <!-- SERVICES -->
-
-    <section id="services">
-
-        <h2>
-            MES SERVICES
-        </h2>
-
-        <ul>
-
-            <li>
-                Création de sites Web
-            </li>
-
-            <li>
-                Conception de logos
-            </li>
-
-            <li>
-                Création d'affiches
-            </li>
-
-            <li>
-                Design graphique
-            </li>
-
-            <li>
-                Création de supports de communication
-            </li>
-
-        </ul>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact">
-
-        <h2>
-            CONTACT
-        </h2>
-
-        <p>
-            Vous avez un projet ? Contactez-moi.
-        </p>
-
-        <p>
-            Email : à compléter
-        </p>
-
-        <p>
-            Téléphone : à compléter
-        </p>
-
-    </section>
-
-
-    <!-- PIED DE PAGE -->
-
-    <footer>
-
-        <p>
-            © 2026 Jérémy Baziota — Tous droits réservés.
-        </p>
-
-    </footer>
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2026 Mon Portfolio. Tous droits réservés.</p>
+  </footer>
 
 </body>
-
 </html>
