@@ -356,6 +356,86 @@ footer {
    RESPONSIVE
 ========================= */
 
+/* =========================
+   PROJETS
+========================= */
+
+#projets {
+    background-color: #eef2ff;
+    max-width: none;
+    padding: 100px max(30px, calc((100% - 1040px) / 2));
+}
+
+#projets h2 {
+    font-size: 35px;
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.projets-cartes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.projet-carte {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.projet-carte:hover {
+    transform: translateY(-8px);
+}
+
+.projet-image {
+    height: 220px;
+    background-color: #dbeafe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projet-placeholder {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.projet-contenu {
+    padding: 25px;
+}
+
+.projet-type {
+    font-size: 13px;
+    font-weight: bold;
+    color: #2563eb;
+    letter-spacing: 1px;
+}
+
+.projet-contenu h3 {
+    font-size: 24px;
+    color: #111827;
+    margin: 10px 0;
+}
+
+.projet-contenu p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.projet-contenu a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projet-contenu a:hover {
+    text-decoration: underline;
+}
 @media (max-width: 700px) {
 
     #accueil {
