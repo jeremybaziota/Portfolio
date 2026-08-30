@@ -1,3 +1,7 @@
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,407 +13,526 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #111111;
     line-height: 1.6;
-    color: #222;
-    background-color: #f5f7fa;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-header {
-    background-color: #111827;
-    padding: 20px;
-    position: sticky;
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
     z-index: 1000;
 }
 
-nav {
-    max-width: 1100px;
-    margin: auto;
+.nav-container {
+    min-height: 75px;
     display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #38bdf8;
-}
-
-
-/* =========================
-   ACCUEIL
-========================= */
-
-#accueil {
-    min-height: 90vh;
-    max-width: 1100px;
-    margin: auto;
-    padding: 80px 30px;
-    display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
 }
 
-.accueil-photo {
-    flex: 0 0 300px;
+
+/* LOGO */
+
+.logo {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #111111;
 }
 
-.accueil-photo img {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 50%;
-    border: 5px solid #2563eb;
+
+/* NAVIGATION */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 35px;
 }
 
-.accueil-contenu {
-    flex: 1;
-    text-align: left;
+.navigation a {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #111111;
+    transition: 0.3s ease;
 }
 
-.accueil-sous-titre {
-    color: #2563eb;
-    font-weight: bold;
+.navigation a:hover {
+    color: #666666;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 75px;
+    background: #f7f7f7;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 800px;
+}
+
+.small-title {
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 15px;
+    color: #666666;
 }
 
-#accueil h1 {
-    font-size: 58px;
-    color: #111827;
-    margin-bottom: 5px;
+.hero h1 {
+    font-size: clamp(45px, 7vw, 85px);
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
 }
 
-#accueil h2 {
-    font-size: 30px;
-    color: #2563eb;
-    margin-bottom: 5px;
+.hero h1 span {
+    display: block;
+    color: #555555;
 }
 
-.specialite {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.accueil-contenu > p {
+.hero-description {
     max-width: 650px;
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 35px;
 }
 
-.boutons {
+
+/* HERO BUTTONS */
+
+.hero-buttons {
     display: flex;
     gap: 15px;
-    margin-top: 25px;
+    flex-wrap: wrap;
 }
 
-.boutons a {
+.btn {
     display: inline-block;
-    background-color: #2563eb;
-    color: white;
-    text-decoration: none;
     padding: 14px 25px;
-    border-radius: 8px;
-    font-weight: bold;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
 }
 
-.boutons a:hover {
-    background-color: #1d4ed8;
+.btn-primary {
+    background: #111111;
+    color: #ffffff;
 }
 
-.boutons .bouton-secondaire {
-    background-color: transparent;
-    color: #2563eb;
-    border: 2px solid #2563eb;
+.btn-primary:hover {
+    background: #333333;
 }
 
-.boutons .bouton-secondaire:hover {
-    background-color: #2563eb;
-    color: white;
+.btn-secondary {
+    border: 1px solid #111111;
+    color: #111111;
 }
 
-
-/* =========================
-   TITRES DES SECTIONS
-========================= */
-
-section h2 {
-    font-size: 35px;
-    color: #111827;
-    margin-bottom: 25px;
-    text-transform: uppercase;
+.btn-secondary:hover {
+    background: #111111;
+    color: #ffffff;
 }
 
 
-/* =========================
-   À PROPOS
-========================= */
+/* =========================================================
+   SECTIONS
+========================================================= */
 
-#apropos {
-    background-color: white;
-    max-width: none;
-    padding: 100px max(30px, calc((100% - 1040px) / 2));
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.section {
+    padding: 110px 0;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #777777;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    background: #ffffff;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
 }
 
-.apropos-contenu {
-    flex: 1;
+.about-text {
+    max-width: 700px;
 }
 
-.apropos-contenu h2 {
-    font-size: 35px;
-    color: #111827;
+.about-text h3 {
+    font-size: 30px;
+    line-height: 1.2;
     margin-bottom: 25px;
 }
 
-.apropos-contenu p {
-    max-width: 700px;
-    margin-bottom: 18px;
-}
-
-.apropos-infos {
-    width: 320px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.info {
-    background-color: #f5f7fa;
-    padding: 25px 15px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.info strong {
-    font-size: 30px;
-    color: #2563eb;
-}
-
-.info span {
-    font-weight: bold;
+.about-text p {
+    font-size: 17px;
+    color: #555555;
+    margin-bottom: 20px;
 }
 
 
-/* =========================
-   COMPÉTENCES
-========================= */
+/* =========================================================
+   SERVICES
+========================================================= */
 
-#competences {
-    background-color: #f5f7fa;
-    max-width: none;
-    padding: 100px max(30px, calc((100% - 1040px) / 2));
+.services {
+    background: #f7f7f7;
 }
 
-#competences h2 {
-    font-size: 35px;
-    color: #111827;
-    margin-bottom: 15px;
-}
-
-.section-description {
-    max-width: 650px;
-    margin-bottom: 40px;
-}
-
-.competences-cartes {
+.services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-.competence-carte {
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
+.service-card {
+    background: #ffffff;
+    padding: 40px;
+    border: 1px solid #eeeeee;
+    transition: 0.3s ease;
 }
 
-.competence-carte:hover {
-    transform: translateY(-5px);
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #111111;
 }
 
-.competence-numero {
-    color: #2563eb;
-    font-size: 20px;
-    font-weight: bold;
+.service-number {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    color: #777777;
+}
+
+.service-card h3 {
+    font-size: 22px;
     margin-bottom: 15px;
 }
 
-.competence-carte h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-    color: #111827;
-}
-
-.competence-carte p {
-    color: #555;
+.service-card p {
+    color: #666666;
+    font-size: 15px;
 }
 
 
-/* =========================
-   PROJETS
-========================= */
+/* =========================================================
+   PROJECTS
+========================================================= */
 
-#projets {
-    background-color: #eef2ff;
-    max-width: none;
-    padding: 100px max(30px, calc((100% - 1040px) / 2));
+.projects {
+    background: #ffffff;
 }
 
-#projets h2 {
-    font-size: 35px;
-    color: #111827;
-}
-
-article {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-}
-
-article h3 {
-    color: #2563eb;
-    margin-bottom: 10px;
-}
-
-
-/* =========================
-   SERVICES
-========================= */
-
-#services {
-    max-width: none;
-    padding: 100px max(30px, calc((100% - 1040px) / 2));
-}
-
-#services h2 {
-    font-size: 35px;
-    color: #111827;
-}
-
-#services ul {
-    list-style: none;
+.projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    border: 1px solid #eeeeee;
+    background: #ffffff;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-image {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeeee;
+    color: #777777;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content p {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #777777;
+    margin-bottom: 8px;
+}
+
+.project-content h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.project-content a {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.project-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    background: #111111;
+    color: #ffffff;
+}
+
+.contact .section-title p {
+    color: #999999;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.contact-text h3 {
+    font-size: 35px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    max-width: 500px;
+    color: #bbbbbb;
+    font-size: 17px;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
     gap: 15px;
 }
 
-#services li {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #444444;
+    background: #1c1c1c;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ffffff;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    padding: 15px 25px;
+    border: none;
+    background: #ffffff;
+    color: #111111;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #dddddd;
 }
 
 
-/* =========================
-   CONTACT
-========================= */
-
-#contact {
-    text-align: center;
-    max-width: 1100px;
-    margin: auto;
-    padding: 100px 30px;
-}
-
-#contact h2 {
-    font-size: 35px;
-    color: #111827;
-}
-
-
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
-footer {
-    background-color: #111827;
-    color: white;
+.footer {
+    padding: 25px 0;
+    background: #111111;
+    border-top: 1px solid #333333;
+    color: #999999;
     text-align: center;
-    padding: 25px;
+}
+
+.footer p {
+    font-size: 12px;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
 
-    #accueil {
-        flex-direction: column;
-        text-align: center;
+    .navigation {
+        gap: 18px;
     }
 
-    .accueil-photo {
-        flex: none;
+    .navigation a {
+        font-size: 11px;
     }
 
-    .accueil-contenu {
-        text-align: center;
-    }
-
-    #accueil h1 {
-        font-size: 42px;
-    }
-
-    #accueil h2 {
-        font-size: 24px;
-    }
-
-    .boutons {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    #apropos {
-        flex-direction: column;
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
         gap: 40px;
     }
 
-    .apropos-infos {
-        width: 100%;
-    }
-
-    .competences-cartes {
-        grid-template-columns: 1fr;
-    }
-
-    #services ul {
-        grid-template-columns: 1fr;
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
 }
-.projet img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px; /* Optionnel : pour arrondir un peu les coins */
+
+
+/* =========================================================
+   RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .nav-container {
+        min-height: 65px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .navigation {
+        gap: 10px;
+    }
+
+    .navigation a {
+        font-size: 9px;
+    }
+
+    .hero {
+        padding-top: 65px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+    .services-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 30px;
+    }
+
+    .project-image {
+        height: 220px;
+    }
+
+    .contact-text h3 {
+        font-size: 28px;
+    }
+
 }
